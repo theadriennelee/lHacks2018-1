@@ -27,7 +27,7 @@ int main(){
             printf ("Enter person that has paid the bill: ");
             scanf ("%d", &person);
             printf ("Person that paid the bill: %d\n", person);
-            if (person>no && person<0)
+            if (person>no && person<=0)
                 printf("This person does not exist");
             else {
                 int price;
@@ -47,11 +47,11 @@ int main(){
                 int status;
                 scanf ("%d", &status);
                 printf ("%d\n", status);
-                if (status>no && status < 0)
+                if (status>no && status <= 0)
                     printf ("This person does not exist\n");
                 else{
-                    float tobepaid = arr[status-1]-avg;
-                    printf ("%.f\n", tobepaid);
+                    float tobepaid = arr[status-1]-(float)avg;
+                    printf ("%.2f\n", tobepaid);
                 }
             }
         }
